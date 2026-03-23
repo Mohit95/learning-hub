@@ -244,3 +244,51 @@ select:focus {
 .stat-card:hover {
   border-color: rgba(59, 130, 246, 0.3);
 }
+
+/* ─── Gap Analysis page ───────────────────────────────────────────────────── */
+.glass-panel.no-hover:hover {
+  transform: none;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.loading-pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Recharts overrides for dark theme */
+.recharts-default-tooltip {
+  background: #1a1f36 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+}
+
+.recharts-legend-item-text {
+  color: var(--text-secondary) !important;
+}
+
+/* Archetype 2x2 grid */
+.archetype-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Mobile adjustments for gap analysis */
+@media (max-width: 640px) {
+  .page {
+    padding: 20px 16px;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .archetype-grid {
+    grid-template-columns: 1fr;
+  }
+}
